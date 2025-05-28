@@ -1,5 +1,5 @@
 {
-  "name": "react-native-code-push",
+  "name": "@mathpresso/react-native-code-push",
   "version": "9.0.1",
   "description": "React Native plugin for the CodePush service",
   "main": "CodePush.js",
@@ -10,7 +10,7 @@
     "code",
     "push"
   ],
-  "author": "Microsoft Corporation",
+  "author": "Mathpresso Mobile Client Chapter (Original: Microsoft Corporation)",
   "license": "MIT",
   "scripts": {
     "clean": "shx rm -rf bin",
