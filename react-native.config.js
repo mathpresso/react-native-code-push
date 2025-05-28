@@ -3,8 +3,8 @@ module.exports = {
     platforms: {
       android: {
         packageInstance:
-          "CodePush.getInstance(getResources().getString(R.string.CodePushDeploymentKey), getApplicationContext(), BuildConfig.DEBUG)",
+          'CodePush.getInstance(getResources().getString(R.string.CodePushDeploymentKey), getApplicationContext(), BuildConfig.DEBUG)',
       },
     },
   },
-};
+}
