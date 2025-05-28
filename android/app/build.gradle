@@ -1,5 +1,11 @@
 apply plugin: "com.android.library"
 
+def isNewArchitectureEnabled() {
+    return project.hasProperty("newArchEnabled") && project.newArchEnabled == "true"
+}
+
+def IS_NEW_ARCHITECTURE_ENABLED = isNewArchitectureEnabled()
+
 def DEFAULT_COMPILE_SDK_VERSION = 26
 def DEFAULT_BUILD_TOOLS_VERSION = "26.0.3"
 def DEFAULT_TARGET_SDK_VERSION = 26
@@ -16,6 +22,7 @@ android {
         targetSdkVersion rootProject.hasProperty('targetSdkVersion') ? rootProject.targetSdkVersion : DEFAULT_TARGET_SDK_VERSION
         versionCode 1
         versionName "1.0"
+        buildConfigField "boolean", "IS_NEW_ARCHITECTURE_ENABLED", IS_NEW_ARCHITECTURE_ENABLED.toString()
     }
 
     lintOptions {
