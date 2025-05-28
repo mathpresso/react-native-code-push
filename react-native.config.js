@@ -1,10 +1,12 @@
 module.exports = {
-    dependency: {
-        platforms: {
-            android: {
-                packageInstance:
-                    "new CodePush(getResources().getString(R.string.CodePushDeploymentKey), getApplicationContext(), BuildConfig.DEBUG)"
-            }
-        }
-    }
-};
+  dependency: {
+    platforms: {
+      android: {
+        sourceDir: './android/app',
+        packageImportPath: 'import com.microsoft.codepush.react.CodePush;',
+        packageInstance:
+          'CodePush.getInstance(getResources().getString(R.string.CodePushDeploymentKey), getApplicationContext(), BuildConfig.DEBUG)',
+      },
+    },
+  },
+}
